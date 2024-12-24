@@ -27,8 +27,9 @@ In this part, you will define your own model class. To do that, you have to reme
 To make it simpler, since we are using a linear function to approximate the phenomenon that generated the data, our function will be:
 
 \begin{align*}
-y = w^T x + b
+loss = \frac{1}{N}\sum_{i=1}^{N}|f_i - y_i|,
 \end{align*}
+where, $f_i$ is the output of the model and $N$ is the number of training data pairs.
 
 Therefore, in the model, we need to set 2 parameters: $w$, $b$
 
@@ -46,4 +47,3 @@ where, $f_i$ is the output of the model and $N$ is the number of training data p
 6. In every certain number of iterations, print the values of the parameters, the training loss, and the testing loss.
 7. Meanwhile, please track the training loss and the testing loss in each iteration. Once the training is done, the curves of losses should be plotted (two curves are drawn in the same figure, where x axis indicates iterations and y axis indicates the losses).
 8. Lastly, draw all the training data, testing data and the curve of the trained model in the same figure (use different showing styles to distinguish them).
-9. 
